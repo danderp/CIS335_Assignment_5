@@ -27,7 +27,7 @@ public class siclink {
     }
     public static void main(String[] args) throws FileNotFoundException {
         int argc = args.length;
-        if (argc > 1) {
+        if (argc < 1) {
             System.out.println("Usage: <PROGADDR> <fileA> <fileB> <fileC> ...");
             exit(0);
         }
@@ -37,13 +37,17 @@ public class siclink {
         //the estab will be an array of OBJECTs this time so i dont need 1000 parallel arrays (god)
         ArrayList<externSymbol> ESTAB = new ArrayList<>();
         char[] MEM = new char[1024];
-        File file = new File("src/outfile.txt");
+        String curr_cs = args[1];
+        File file = new File(curr_cs+".txt");
         Scanner scanner = new Scanner(file);
-
-        //pass 1
-        for() {
-
+        String file_line = "";
+        int line_count = 0;
+        while (scanner.hasNextLine()) {
+            file_line = scanner.nextLine();
+            System.out.println(file_line);
+            line_count++;
         }
+        //pass 1
         while (scanner.hasNextLine()) {
             while (scanner.nextLine().charAt(0) != 'E') {
 
