@@ -49,7 +49,7 @@ public class siclink {
     public static void main(String[] args) throws FileNotFoundException {
         int argc = args.length;
         if (argc < 1) {
-            System.out.println("Usage: <PROGADDR> <fileA> <fileB> <fileC> ...");
+            System.out.println("Usage: <fileA> <fileB> <fileC> ...");
             exit(0);
         }
         //init program address from cmdline arg
